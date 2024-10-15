@@ -16,7 +16,7 @@ import java.util.Scanner;
  * fichero binario. Incluye métodos para pedir la ruta del fichero, agregar
  * alumnos y escribir los datos de los alumnos en el archivo.
  * 
- * @author Verduritas04
+ * @author MigGon
  */
 public class Main {
 

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Clase que representa a un Alumno con atributos como NIA, nombre, apellidos, género, fecha de nacimiento, ciclo, curso y grupo.
  * 
- * @author Verduritas04
+ * @author MigGon
  */
 public class Alumno {
 	int nia;
