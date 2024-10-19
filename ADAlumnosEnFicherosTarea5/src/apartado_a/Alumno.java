@@ -1,13 +1,15 @@
 package apartado_a;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Clase que representa a un Alumno con atributos como NIA, nombre, apellidos, género, fecha de nacimiento, ciclo, curso y grupo.
  * 
  * @author MigGon
  */
-public class Alumno {
+public class Alumno implements Serializable {
 	int nia;
 	String nombre;
 	String apellidos;
@@ -186,6 +188,11 @@ public class Alumno {
 		this.grupo = grupo;
 	}
 
+	public static String convertirFecha(LocalDate fecha) {
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("d-M-yyyy");
+        return fecha.format(formato);
+    }
+	
 	/**
 	 * Devuelve una representación en cadena de los atributos del alumno.
 	 * 
@@ -194,6 +201,6 @@ public class Alumno {
 	@Override
 	public String toString() {
 		return "Alumno [nia=" + nia + ", nombre=" + nombre + ", apellidos=" + apellidos + ", genero=" + genero
-				+ ", nacimiento=" + nacimiento + ", ciclo=" + ciclo + ", curso=" + curso + ", grupo=" + grupo + "]";
+				+ ", nacimiento=" + convertirFecha(nacimiento) + ", ciclo=" + ciclo + ", curso=" + curso + ", grupo=" + grupo + "]";
 	}
 }
