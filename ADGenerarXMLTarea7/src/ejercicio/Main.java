@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.w3c.dom.Element;
 
 public class Main {
-	final static int NUM_ALUMNOS = 1;
+	final static int NUM_ALUMNOS = 5;
 
 	public static void main(String[] args) {
 		ArrayList<Alumno> alumnos = new ArrayList<>();
