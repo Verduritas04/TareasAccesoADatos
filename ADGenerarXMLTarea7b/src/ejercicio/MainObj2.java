@@ -4,7 +4,7 @@ import org.w3c.dom.Element;
 
 public class MainObj2 extends MainObj {
 	@Override
-	public void crearTrabajador(Misedtru xml, Alumno alumno, int i) {
+	public void crearAlumno(Misedtru xml, Alumno alumno, int i) {
 		Element alumnoXml = xml.addMainElement("alumno");
 		xml.addAtribute("id", i + "", alumnoXml);
 		xml.addAtribute("nia", alumno.getNia() + "", alumnoXml);

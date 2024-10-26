@@ -13,7 +13,7 @@ public class MainObj {
 		leerAlumno(io, alumnos);
 		io.close();
 		Misedtru xml = new Misedtru("colegio");
-		crearTrabajadores(xml, alumnos);
+		crearAlumnos(xml, alumnos);
 		xml.writeToXml("doc.xml");
 	}
 	
@@ -32,13 +32,13 @@ public class MainObj {
 		}
 	}
 	
-	public void crearTrabajadores(Misedtru xml, ArrayList<Alumno> alumnos) {
+	public void crearAlumnos(Misedtru xml, ArrayList<Alumno> alumnos) {
 		for (int i = 0; i < alumnos.size(); i++) {
-			crearTrabajador(xml, alumnos.get(i), i);
+			crearAlumno(xml, alumnos.get(i), i);
 		}
 	}
 	
-	public void crearTrabajador(Misedtru xml, Alumno alumno, int i) {
+	public void crearAlumno(Misedtru xml, Alumno alumno, int i) {
 		Element alumnoXml = xml.addMainElement("alumno");
 		xml.addAtribute("id", i + "", alumnoXml);
 		xml.addElementTo("nia", alumno.getNia() + "", alumnoXml);
